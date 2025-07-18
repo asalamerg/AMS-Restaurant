@@ -1,3 +1,6 @@
+import 'package:ams_restaurant/feature/authentication/view/login.dart';
+import 'package:ams_restaurant/feature/authentication/view/register.dart';
+import 'package:ams_restaurant/shared/app_theme.dart';
 import 'package:flutter/material.dart';
 
 import 'feature/home_screen/view/home_screen.dart';
@@ -15,8 +18,12 @@ class Restaurant extends StatelessWidget {
     return MaterialApp(
       routes: {
         HomeScreen.routeName :(context)=>HomeScreen(),
+        LoginScreen.routeName :(context)=>LoginScreen(),
+        RegisterScreen.routeName :(context)=>RegisterScreen(),
       },
-      initialRoute: HomeScreen.routeName,
+      initialRoute: LoginScreen.routeName,
+      theme: AppTheme.lightTheme,
+      themeMode:  ThemeMode.light,
     );
   }
 }
