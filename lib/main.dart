@@ -1,5 +1,6 @@
 import 'package:ams_restaurant/feature/authentication/view/login.dart';
 import 'package:ams_restaurant/feature/authentication/view/register.dart';
+import 'package:ams_restaurant/feature/onboarding/view/onboarding.dart';
 import 'package:ams_restaurant/shared/app_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -20,8 +21,9 @@ class Restaurant extends StatelessWidget {
         HomeScreen.routeName :(context)=>HomeScreen(),
         LoginScreen.routeName :(context)=>LoginScreen(),
         RegisterScreen.routeName :(context)=>RegisterScreen(),
+        Onboarding.routeName :(context)=>Onboarding(),
       },
-      initialRoute: LoginScreen.routeName,
+      initialRoute: Onboarding.routeName,
       theme: AppTheme.lightTheme,
       themeMode:  ThemeMode.light,
     );

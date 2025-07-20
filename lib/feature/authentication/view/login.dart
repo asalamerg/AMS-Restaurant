@@ -3,6 +3,7 @@ import 'package:ams_restaurant/feature/home_screen/view/home_screen.dart';
 import 'package:ams_restaurant/shared/app_theme.dart';
 import 'package:ams_restaurant/shared/default_button.dart';
 import 'package:ams_restaurant/shared/text_form_field.dart';
+import 'package:ams_restaurant/shared/validation.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget{
@@ -22,8 +23,8 @@ class LoginScreen extends StatelessWidget{
           children: [
             SizedBox(height: MediaQuery.of(context).size.height * 0.1,),
             Image.asset("assets/image/splash.png" , height: 240, width:  336, fit: BoxFit.fill,) ,
-            DefaultTextFormField(title: 'email', controller: emailController,),
-            DefaultTextFormField(title: 'password ', controller: passwordController,),
+            DefaultTextFormField(title: 'email', controller: emailController, validator: validation.name,),
+            DefaultTextFormField(title: 'password ', controller: passwordController, validator: validation.password,),
             SizedBox(height: MediaQuery.of(context).size.height * 0.1 ,),
 
             DefaultButton(onPressed: (){
